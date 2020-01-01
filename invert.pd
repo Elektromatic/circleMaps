@@ -1,0 +1,103 @@
+#N canvas 1107 20 494 737 12;
+#X obj 173 105 r \$1-invert;
+#X obj 173 181 pack 0 1 2 3 4;
+#X obj 173 201 route 0 1 2 3;
+#X msg 173 279 \$1 \$2 \$3 \$4;
+#X msg 195 260 \$2 \$3 \$4 \$1;
+#X obj 196 124 r \$1-note1;
+#X obj 220 143 r \$1-note2;
+#X obj 244 161 r \$1-note3;
+#X obj 279 181 r \$1-note4;
+#X msg 217 240 \$3 \$4 \$1 \$2;
+#X msg 239 220 \$4 \$1 \$2 \$3;
+#X obj 173 301 unpack 1 2 3 4;
+#X obj 173 634 s \$1-noteI1-set;
+#X obj 204 614 s \$1-noteI2-set;
+#X obj 236 595 s \$1-noteI3-set;
+#X obj 268 577 s \$1-noteI4-set;
+#X obj 80 93 r \$1-quality;
+#X obj 112 31 r \$1-root;
+#X obj 80 111 t b;
+#X obj 112 51 t b;
+#X obj 112 71 delay 1;
+#X obj 80 131 delay 1;
+#X obj 66 155 r \$1-transpose;
+#X obj 67 173 t b;
+#X obj 67 194 delay 1;
+#X obj 284 268 r \$1-invert;
+#X obj 284 287 >= 1;
+#X obj 284 307 * 12;
+#X obj 268 349 +;
+#X obj 284 326 t b f;
+#X obj 284 369 r \$1-invert;
+#X obj 284 407 * 12;
+#X obj 236 466 +;
+#X obj 284 427 t b f;
+#X obj 284 388 >= 2;
+#X obj 284 465 r \$1-invert;
+#X obj 284 503 * 12;
+#X obj 284 523 t b f;
+#X obj 284 484 >= 3;
+#X obj 204 575 +;
+#N canvas 798 113 632 468 copyrightInfo 1;
+#X text 74 306 j.raski@gmail.com;
+#X text 43 19 This program creates generative music on an eletronic
+synthesiser. Copyright (C) 2019 Jerry Z. Raski This program is free
+software: you can redistribute it and/or modify it under the terms
+of the GNU General Public License as published by the Free Software
+Foundation \, either version 3 of the License \, or (at your option)
+any later version. This program is distributed in the hope that it
+will be useful \, but WITHOUT ANY WARRANTY \; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+the GNU General Public License for more details. You should have received
+a copy of the GNU General Public License along with this program. If
+not \, see <https://www.gnu.org/licenses/>.;
+#X restore 87 695 pd copyrightInfo;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 9 0;
+#X connect 2 3 10 0;
+#X connect 3 0 11 0;
+#X connect 4 0 11 0;
+#X connect 5 0 1 1;
+#X connect 6 0 1 2;
+#X connect 7 0 1 3;
+#X connect 8 0 1 4;
+#X connect 9 0 11 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 1 39 0;
+#X connect 11 2 32 0;
+#X connect 11 3 28 0;
+#X connect 16 0 18 0;
+#X connect 17 0 19 0;
+#X connect 18 0 1 0;
+#X connect 18 0 21 0;
+#X connect 19 0 1 0;
+#X connect 19 0 20 0;
+#X connect 20 0 1 0;
+#X connect 21 0 1 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 23 0 1 0;
+#X connect 24 0 1 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 29 0;
+#X connect 28 0 15 0;
+#X connect 29 0 28 0;
+#X connect 29 1 28 1;
+#X connect 30 0 34 0;
+#X connect 31 0 33 0;
+#X connect 32 0 14 0;
+#X connect 33 0 32 0;
+#X connect 33 1 32 1;
+#X connect 34 0 31 0;
+#X connect 35 0 38 0;
+#X connect 36 0 37 0;
+#X connect 37 0 39 0;
+#X connect 37 1 39 1;
+#X connect 38 0 36 0;
+#X connect 39 0 13 0;

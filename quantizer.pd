@@ -1,0 +1,60 @@
+#N canvas 120 380 378 565 10;
+#X obj 41 372 loadbang;
+#X obj 102 102 cnv 15 160 225 empty empty quantizer_\$1 0 6 0 9 -204800
+-66577 0;
+#X obj 105 127 hradio 12 1 0 5 \$1-transpose \$0-transpose transpose
+1 -8 0 10 -262144 -1 -1 2;
+#X text 102 140 -2;
+#X text 131 140 0;
+#X text 149 140 +2;
+#X obj 183 135 vradio 12 1 0 12 \$1-quality \$0-quality quality 0 -8
+0 10 -262144 -1 -1 9;
+#X obj 41 391 f \$0;
+#X obj 105 299 hradio 12 1 0 12 \$1-root \$0-root diatonic_root 0 -8
+0 10 -262144 -1 -1 0;
+#X text 107 311 C;
+#X text 131 311 D;
+#X text 155 311 E;
+#X text 167 311 F;
+#X text 191 311 G;
+#X text 215 311 A;
+#X text 239 311 B;
+#X obj 145 166 vradio 12 1 0 4 \$1-invert \$0-invert inver -24 -6 0
+10 -262144 -1 -1 0;
+#X text 117 164 root;
+#X text 123 176 1st;
+#X text 123 189 2nd;
+#X text 123 203 3rd;
+#X obj 145 231 vradio 12 1 0 4 \$1-voicing \$0-voicing voice -24 -6
+0 10 -262144 -1 -1 0;
+#X msg 41 411 \; \$1-transpose 2 \; \$1-quality 0 \; \$1-root 0 \;
+\$1-invert 0 \; \$1-voicing 0 \;;
+#X text 104 230 closed;
+#X text 105 242 drop 2;
+#X text 105 255 drop 3;
+#X text 117 267 open;
+#X text 200 170 minor 7th;
+#X text 206 182 dominant;
+#X text 200 194 major 7th;
+#X text 200 147 fully dim;
+#X text 206 159 half dim;
+#X text 200 255 major 9th;
+#X text 200 268 minor 9th;
+#X text 206 134 min/maj7;
+#X text 212 219 aug dom;
+#X text 194 207 aug maj7th;
+#X text 200 231 maj7 sus2;
+#X text 200 243 min7 sus4;
+#X obj 152 418 loadbang;
+#X obj 152 436 f \$0;
+#X floatatom 152 455 5 0 0 0 - - -, f 5;
+#X obj 175 385 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 152 473 s dollarZero;
+#X connect 0 0 7 0;
+#X connect 7 0 22 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 41 0 43 0;
+#X connect 42 0 40 0;
+#X coords 0 -1 1 1 165 230 1 100 100;

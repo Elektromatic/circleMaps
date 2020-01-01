@@ -1,0 +1,110 @@
+#N canvas 957 303 779 607 12;
+#X obj 89 70 - 2;
+#X obj 89 90 * 12;
+#X obj 194 70 + 60;
+#X floatatom 89 160 5 0 0 0 - - -, f 5;
+#X obj 194 50 r \$1-root;
+#X obj 127 90 t b f;
+#X obj 89 115 +;
+#X floatatom 191 327 5 0 0 0 note2 #1-note2-set #1-note2, f 5;
+#X obj 89 179 s \$1-note1-set;
+#X obj 551 53 setctl \$1-note1;
+#X obj 551 72 setctl \$1-note2;
+#X floatatom 98 328 5 0 0 0 note1 #1-note1-set #1-note1, f 5;
+#X obj 317 201 r p2;
+#X obj 309 181 r \$1-note1;
+#X obj 318 221 t b f;
+#X obj 309 242 +;
+#X obj 309 261 s \$1-note2-set;
+#X obj 470 85 quality \$1;
+#X obj 551 91 setctl \$1-note3;
+#X obj 551 110 setctl \$1-note4;
+#X obj 428 180 r \$1-note1;
+#X obj 437 220 t b f;
+#X obj 428 241 +;
+#X obj 428 260 s \$1-note3-set;
+#X obj 436 200 r p3;
+#X obj 538 181 r \$1-note1;
+#X obj 547 221 t b f;
+#X obj 538 242 +;
+#X obj 546 201 r p4;
+#X obj 538 261 s \$1-note4-set;
+#X floatatom 374 325 5 0 0 0 note4 #1-note4-set #1-note4, f 5;
+#X floatatom 281 326 5 0 0 0 note3 #1-note3-set #1-note3, f 5;
+#X obj 547 317 setctl \$1-noteI1;
+#X obj 547 336 setctl \$1-noteI2;
+#X obj 547 355 setctl \$1-noteI3;
+#X obj 547 374 setctl \$1-noteI4;
+#X floatatom 191 352 5 0 0 0 noteI2 #1-noteI2-set #1-noteI2, f 5;
+#X floatatom 98 353 5 0 0 0 noteI1 #1-noteI1-set #1-noteI1, f 5;
+#X floatatom 374 350 5 0 0 0 noteI4 #1-noteI4-set #1-noteI4, f 5;
+#X floatatom 281 351 5 0 0 0 noteI3 #1-noteI3-set #1-noteI3, f 5;
+#X obj 89 50 r \$1-transpose;
+#X obj 474 345 invert \$1;
+#X obj 551 441 setctl \$1-noteV1;
+#X obj 551 460 setctl \$1-noteV2;
+#X obj 551 479 setctl \$1-noteV3;
+#X obj 551 498 setctl \$1-noteV4;
+#X floatatom 191 377 5 0 0 0 noteV2 #1-noteV2-set #1-noteV2, f 5;
+#X floatatom 98 378 5 0 0 0 noteV1 #1-noteV1-set #1-noteV1, f 5;
+#X floatatom 374 375 5 0 0 0 noteV4 #1-noteV4-set #1-noteV4, f 5;
+#X floatatom 281 376 5 0 0 0 noteV3 #1-noteV3-set #1-noteV3, f 5;
+#X obj 470 469 voicing \$1;
+#X obj 72 509 r \$1-noteV1;
+#X obj 158 509 r \$1-noteV2;
+#X obj 244 509 r \$1-noteV3;
+#X obj 329 509 r \$1-noteV4;
+#X obj 72 528 outlet;
+#X obj 158 528 outlet;
+#X obj 244 528 outlet;
+#X obj 329 528 outlet;
+#X obj 265 50 inlet;
+#X obj 265 70 t b f;
+#X obj 89 141 +;
+#X text 310 48 scale offsets;
+#N canvas 798 113 632 468 copyrightInfo 1;
+#X text 74 306 j.raski@gmail.com;
+#X text 43 19 This program creates generative music on an electronic
+synthesiser. Copyright (C) 2019 Jerry Z. Raski This program is free
+software: you can redistribute it and/or modify it under the terms
+of the GNU General Public License as published by the Free Software
+Foundation \, either version 3 of the License \, or (at your option)
+any later version. This program is distributed in the hope that it
+will be useful \, but WITHOUT ANY WARRANTY \; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+the GNU General Public License for more details. You should have received
+a copy of the GNU General Public License along with this program. If
+not \, see <https://www.gnu.org/licenses/>.;
+#X restore 48 574 pd copyrightInfo;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
+#X connect 6 0 61 0;
+#X connect 12 0 14 0;
+#X connect 13 0 15 0;
+#X connect 14 0 15 0;
+#X connect 14 1 15 1;
+#X connect 15 0 16 0;
+#X connect 20 0 22 0;
+#X connect 21 0 22 0;
+#X connect 21 1 22 1;
+#X connect 22 0 23 0;
+#X connect 24 0 21 0;
+#X connect 25 0 27 0;
+#X connect 26 0 27 0;
+#X connect 26 1 27 1;
+#X connect 27 0 29 0;
+#X connect 28 0 26 0;
+#X connect 40 0 0 0;
+#X connect 51 0 55 0;
+#X connect 52 0 56 0;
+#X connect 53 0 57 0;
+#X connect 54 0 58 0;
+#X connect 59 0 60 0;
+#X connect 60 0 61 0;
+#X connect 60 1 61 1;
+#X connect 61 0 3 0;

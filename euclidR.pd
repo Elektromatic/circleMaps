@@ -1,0 +1,39 @@
+#N canvas 1080 72 360 267 12;
+#X obj 75 31 inlet;
+#X obj 193 92 inlet;
+#X obj 137 56 inlet;
+#X obj 75 152 select 1;
+#X obj 75 173 outlet;
+#X obj 241 134 inlet;
+#X obj 75 75 +;
+#X obj 75 94 *;
+#X obj 75 113 %;
+#X obj 75 133 <;
+#X text 125 39 hits per bar;
+#X text 191 75 offset in bar;
+#X text 236 117 length of bar;
+#X text 48 14 plc in bar;
+#N canvas 798 113 632 468 copyrightInfo 1;
+#X text 74 306 j.raski@gmail.com;
+#X text 43 19 This program creates generative music on an electron
+synthesiser. Copyright (C) 2019 Jerry Z. Raski This program is free
+software: you can redistribute it and/or modify it under the terms
+of the GNU General Public License as published by the Free Software
+Foundation \, either version 3 of the License \, or (at your option)
+any later version. This program is distributed in the hope that it
+will be useful \, but WITHOUT ANY WARRANTY \; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+the GNU General Public License for more details. You should have received
+a copy of the GNU General Public License along with this program. If
+not \, see <https://www.gnu.org/licenses/>.;
+#X restore 21 243 pd copyrightInfo;
+#X connect 0 0 6 0;
+#X connect 1 0 6 1;
+#X connect 2 0 7 1;
+#X connect 2 0 9 1;
+#X connect 3 0 4 0;
+#X connect 5 0 8 1;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;

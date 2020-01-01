@@ -1,0 +1,79 @@
+#N canvas 14 53 483 524 12;
+#X obj 195 406 outlet;
+#X obj 259 145 random 9;
+#X obj 259 164 + 8;
+#X obj 259 183 t b f;
+#X obj 291 253 random 8;
+#X obj 259 231 random 8;
+#X obj 259 125 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 195 19 inlet;
+#X obj 195 76 f 0;
+#X obj 195 101 + 1;
+#X floatatom 162 101 4 0 0 0 - - -, f 4;
+#N canvas 798 113 632 468 copyrightInfo 0;
+#X text 74 306 j.raski@gmail.com;
+#X text 43 19 This program creates generative music on an electronic
+synthesiser. Copyright (C) 2019 Jerry Z. Raski This program is free
+software: you can redistribute it and/or modify it under the terms
+of the GNU General Public License as published by the Free Software
+Foundation \, either version 3 of the License \, or (at your option)
+any later version. This program is distributed in the hope that it
+will be useful \, but WITHOUT ANY WARRANTY \; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+the GNU General Public License for more details. You should have received
+a copy of the GNU General Public License along with this program. If
+not \, see <https://www.gnu.org/licenses/>.;
+#X restore 23 486 pd copyrightInfo;
+#X obj 195 356 fseq \$1;
+#X obj 259 274 + 7;
+#X obj 259 314 mod;
+#X obj 241 333 max;
+#X text 73 125 Chgs rhythm when notes chg;
+#X text 34 314 hits on high side of length;
+#X obj 229 101 sel 0;
+#X text 27 427 play as many notes as are hits;
+#X obj 241 426 s \$1-hits;
+#X msg 213 57 0;
+#X floatatom 319 202 3 0 0 1 length - -, f 3;
+#X floatatom 349 321 3 0 0 0 - - -, f 3;
+#X floatatom 350 350 3 0 0 0 - - -, f 3;
+#X text 346 335 larger of these;
+#X text 114 76 counts 64's;
+#X obj 213 38 r reset;
+#X obj 229 76 mod 64;
+#X obj 227 294 random 1;
+#X obj 227 314 + 1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 3 1 4 1;
+#X connect 3 1 5 1;
+#X connect 3 1 12 4;
+#X connect 3 1 14 1;
+#X connect 3 1 22 0;
+#X connect 4 0 12 3;
+#X connect 5 0 13 0;
+#X connect 5 0 15 0;
+#X connect 5 0 23 0;
+#X connect 6 0 1 0;
+#X connect 6 0 29 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 0 10 0;
+#X connect 8 0 12 0;
+#X connect 8 0 18 0;
+#X connect 9 0 28 0;
+#X connect 12 0 0 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 1;
+#X connect 14 0 24 0;
+#X connect 15 0 12 2;
+#X connect 15 0 20 0;
+#X connect 18 0 6 0;
+#X connect 21 0 8 1;
+#X connect 27 0 21 0;
+#X connect 28 0 8 1;
+#X connect 29 0 30 0;
+#X connect 30 0 12 1;

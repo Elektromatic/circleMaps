@@ -1,0 +1,81 @@
+#N canvas 754 211 526 375 12;
+#X obj 101 102 cnv 15 132 40 empty empty fSeq_\$1 0 6 0 9 -261682 -66577
+0;
+#X floatatom 172 127 4 0 0 2 off #1-offset-set #1-offset, f 4;
+#X floatatom 203 127 4 0 0 2 len #1-length-set #1-length, f 4;
+#X obj 47 168 inlet;
+#X obj 400 22 inlet;
+#X obj 315 22 inlet;
+#X obj 245 22 inlet;
+#X obj 22 324 outlet;
+#X floatatom 107 127 4 0 0 2 divis #1-divisor-set #1-divisor, f 4
+;
+#X obj 315 240 setctl \$1-offset;
+#X obj 315 258 setctl \$1-length;
+#X obj 245 42 s \$1-hits;
+#X obj 315 42 s \$1-offset;
+#X obj 400 42 s \$1-length;
+#X obj 123 248 r \$1-hits;
+#X obj 123 269 r \$1-offset;
+#X obj 124 289 r \$1-length;
+#X obj 318 68 loadbang;
+#X msg 318 96 1;
+#X obj 318 116 s \$1-hits;
+#X obj 22 305 euclidR;
+#X msg 353 96 16;
+#X obj 354 135 s \$1-length;
+#X text 281 300 h=1 l=8 hits twice in 1 measure;
+#X text 281 313 h=1 l=16 hits once in 1 measure;
+#N canvas 798 113 440 468 copyrightInfo 0;
+#X text 48 167 j.raski@gmail.com;
+#X text 43 19 This program creates generative music on an electronic
+synthesiser. Copyright (C) 2019 Jerry Z. Raski This program is free
+software: you can redistribute it and/or modify it under the terms
+of the GNU General Public License as published by the Free Software
+Foundation \, either version 3 of the License \, or (at your option)
+any later version. This program is distributed in the hope that it
+will be useful \, but WITHOUT ANY WARRANTY \; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+the GNU General Public License for more details. You should have received
+a copy of the GNU General Public License along with this program. If
+not \, see <https://www.gnu.org/licenses/>.;
+#X restore 322 337 pd copyrightInfo;
+#X obj 47 244 f 1;
+#X obj 47 265 + 1;
+#X obj 47 223 sel 0;
+#X text 100 211 0-l ctr;
+#X obj 102 226 r \$1-length;
+#X obj 74 186 r \$1-divisor;
+#X obj 315 222 setctl \$1-hits;
+#X obj 315 204 setctl \$1-divisor;
+#X obj 153 21 inlet;
+#X obj 153 42 s \$1-divisor;
+#X floatatom 140 127 4 0 0 2 hits #1-hits-set #1-hits, f 4;
+#X obj 47 204 mod 1;
+#X obj 75 245 mod 8;
+#X msg 391 96 4;
+#X obj 391 155 s \$1-divisor;
+#X connect 3 0 37 0;
+#X connect 4 0 13 0;
+#X connect 5 0 12 0;
+#X connect 6 0 11 0;
+#X connect 14 0 20 1;
+#X connect 15 0 20 2;
+#X connect 16 0 20 3;
+#X connect 17 0 18 0;
+#X connect 17 0 21 0;
+#X connect 17 0 39 0;
+#X connect 18 0 19 0;
+#X connect 20 0 7 0;
+#X connect 21 0 22 0;
+#X connect 26 0 27 0;
+#X connect 26 0 20 0;
+#X connect 27 0 38 0;
+#X connect 28 0 26 0;
+#X connect 30 0 38 1;
+#X connect 31 0 37 1;
+#X connect 34 0 35 0;
+#X connect 37 0 28 0;
+#X connect 38 0 26 1;
+#X connect 39 0 40 0;
+#X coords 0 -1 1 1 135 45 1 100 100;
